@@ -23,9 +23,10 @@ main {
     .overlay {
         position: fixed;
         width: 50%;
+        max-width: 750px;
         height: 100vh;
         top: 0;
-        right: 0;
+        left: 50%;
         bottom: 0;
         background-color: rgba( $black, 0.7);
         z-index: 2;
@@ -78,10 +79,92 @@ main {
         transform: translateX(40px);
         .punctuation {
             color: $blue;
-            
-        @include textGlow($blue);
+            @include textGlow($blue);
+        }
+        .value {
+            font-style: italic;
         }
     }
 }
 
+.sidebar, .socialPanel {
+    z-index: 3;
+    width: 300px;
+    min-height: 100vh;
+    background-color: rgba( $black, 0.9);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: right 250ms ease-in-out;
+    h2 {
+        font-size: 4rem;
+        color: $orange;
+        @include textGlow($blue);
+        text-transform: lowercase;
+    }
+    h3 {
+        font-size: 2rem;
+        color: $purple;
+        @include textGlow($yellow);
+        text-transform: lowercase;
+        text-align: center;
+    }
+}
+
+.sidebar {
+    left: -300px;
+    .topBorder {
+        top: 0px;
+        left: 0px;
+    }
+    .navList {
+        margin: 50% 0;
+    }
+    li {
+        color: $background;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+}
+
+.active {
+    left: 0px;
+}
+
+.socialPanel {
+    right: -300px;
+    top: 0px;
+    .topBorder {
+        right: 0px;
+    }
+    .bottomBorder {
+        right: 0px;
+    }
+    .socialsToggle {
+        right: 0px;
+    }
+    .socialsList {
+    margin: 25%;
+    }
+    
+}
+
+.open {
+    right: 0px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    p{
+        font-size: 2rem;
+        color: $green;
+        @include textGlow($pink);
+        font-weight: 700;
+        text-align: center;
+    }
+}
 

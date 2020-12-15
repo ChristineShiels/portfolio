@@ -259,10 +259,22 @@ body {
   font-family: 'Inconsolata', monospace;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+  font-weight: 400;
   text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  text-transform: lowercase;
+}
+
+.grrl {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .spanx {
@@ -289,6 +301,69 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.topBorder {
+  top: 0;
+  background-color: #FA7A55;
+  display: block;
+  width: 10px;
+  height: 20vh;
+  position: absolute;
+  z-index: 5;
+  border-radius: 10px;
+}
+
+.bottomBorder {
+  top: 30vh;
+  background-color: #FA7A55;
+  display: block;
+  width: 10px;
+  height: 70vh;
+  position: absolute;
+  z-index: 5;
+  border-radius: 10px;
+}
+
+.toggle, .socialsToggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FA7A55;
+  cursor: pointer;
+  position: absolute;
+  width: 7vh;
+  height: 7vh;
+  top: 21.5vh;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+.navList, .socialsList {
+  height: 50vh;
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.far, .fab {
+  color: #FEE;
+  font-size: 2.5rem;
 }
 
 main {
@@ -331,9 +406,10 @@ main img {
 main .overlay {
   position: fixed;
   width: 50%;
+  max-width: 750px;
   height: 100vh;
   top: 0;
-  right: 0;
+  left: 50%;
   bottom: 0;
   background-color: rgba(50, 32, 37, 0.7);
   z-index: 2;
@@ -341,25 +417,25 @@ main .overlay {
 
 main h1 {
   color: #FA7A55;
-  text-shadow: 0px 0px 10px rgba(250, 122, 85, 0.5);
+  text-shadow: 0px 0px 7px rgba(250, 122, 85, 0.5);
   font-size: 3rem;
 }
 
 main h1 .tag {
   color: #1CE;
-  text-shadow: 0px 0px 10px rgba(17, 204, 238, 0.5);
+  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
 }
 
 main h2 {
   color: #FE0;
-  text-shadow: 0px 0px 10px rgba(255, 238, 0, 0.5);
+  text-shadow: 0px 0px 7px rgba(255, 238, 0, 0.5);
   font-size: 2.5rem;
   margin-bottom: 10%;
 }
 
 main h2 .tag {
   color: #F157ED;
-  text-shadow: 0px 0px 10px rgba(241, 87, 237, 0.5);
+  text-shadow: 0px 0px 7px rgba(241, 87, 237, 0.5);
 }
 
 main .tag {
@@ -368,19 +444,19 @@ main .tag {
 
 main h3 {
   color: #BADA55;
-  text-shadow: 0px 0px 10px rgba(186, 218, 85, 0.5);
+  text-shadow: 0px 0px 7px rgba(186, 218, 85, 0.5);
   font-size: 3rem;
   text-transform: lowercase;
 }
 
 main h3 .punctuation {
   color: #DE1E7E;
-  text-shadow: 0px 0px 10px rgba(222, 30, 126, 0.5);
+  text-shadow: 0px 0px 7px rgba(222, 30, 126, 0.5);
 }
 
 main h3 .and {
   color: #1CE;
-  text-shadow: 0px 0px 10px rgba(17, 204, 238, 0.5);
+  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
 }
 
 main h3:nth-of-type(2), main h3:nth-of-type(3) {
@@ -391,7 +467,7 @@ main h3:nth-of-type(2), main h3:nth-of-type(3) {
 main p {
   font-size: 2rem;
   color: #FEE;
-  text-shadow: 0px 0px 10px rgba(255, 238, 238, 0.5);
+  text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
   text-transform: lowercase;
   -webkit-transform: translateX(40px);
           transform: translateX(40px);
@@ -399,5 +475,106 @@ main p {
 
 main p .punctuation {
   color: #1CE;
-  text-shadow: 0px 0px 10px rgba(17, 204, 238, 0.5);
+  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
+}
+
+main p .value {
+  font-style: italic;
+}
+
+.sidebar, .socialPanel {
+  z-index: 3;
+  width: 300px;
+  min-height: 100vh;
+  background-color: rgba(50, 32, 37, 0.9);
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-transition: right 250ms ease-in-out;
+  transition: right 250ms ease-in-out;
+}
+
+.sidebar h2, .socialPanel h2 {
+  font-size: 4rem;
+  color: #FA7A55;
+  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
+  text-transform: lowercase;
+}
+
+.sidebar h3, .socialPanel h3 {
+  font-size: 2rem;
+  color: #F157ED;
+  text-shadow: 0px 0px 7px rgba(255, 238, 0, 0.5);
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.sidebar {
+  left: -300px;
+}
+
+.sidebar .topBorder {
+  top: 0px;
+  left: 0px;
+}
+
+.sidebar .navList {
+  margin: 50% 0;
+}
+
+.sidebar li {
+  color: #FEE;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.active {
+  left: 0px;
+}
+
+.socialPanel {
+  right: -300px;
+  top: 0px;
+}
+
+.socialPanel .topBorder {
+  right: 0px;
+}
+
+.socialPanel .bottomBorder {
+  right: 0px;
+}
+
+.socialPanel .socialsToggle {
+  right: 0px;
+}
+
+.socialPanel .socialsList {
+  margin: 25%;
+}
+
+.open {
+  right: 0px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+footer p {
+  font-size: 2rem;
+  color: #BADA55;
+  text-shadow: 0px 0px 7px rgba(222, 30, 126, 0.5);
+  font-weight: 700;
+  text-align: center;
 }
