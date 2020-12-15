@@ -303,8 +303,8 @@ p {
           flex-direction: column;
 }
 
-.topBorder {
-  top: 0;
+.topBorder, .bottomBorder {
+  top: 0px;
   background-color: #FA7A55;
   display: block;
   width: 10px;
@@ -316,16 +316,18 @@ p {
 
 .bottomBorder {
   top: 30vh;
-  background-color: #FA7A55;
-  display: block;
-  width: 10px;
   height: 70vh;
-  position: absolute;
-  z-index: 5;
-  border-radius: 10px;
 }
 
-.toggle, .socialsToggle {
+.sidebarToggle, .socialsToggle {
+  position: absolute;
+  top: 0px;
+  z-index: 6;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.toggleButton, .socialsToggleButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,6 +345,42 @@ p {
   top: 21.5vh;
   border-radius: 10px;
   z-index: 5;
+}
+
+.sidebar, .socialsPanel {
+  z-index: 3;
+  width: 300px;
+  min-height: 100vh;
+  background-color: rgba(50, 32, 37, 0.9);
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.sidebar h2, .socialsPanel h2 {
+  font-size: 4rem;
+  color: #FA7A55;
+  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
+  text-transform: lowercase;
+}
+
+.sidebar h3, .socialsPanel h3 {
+  font-size: 2rem;
+  color: #F157ED;
+  text-shadow: 0px 0px 7px rgba(255, 238, 0, 0.5);
+  text-transform: lowercase;
+  text-align: center;
 }
 
 .navList, .socialsList {
@@ -364,6 +402,7 @@ p {
 .far, .fab {
   color: #FEE;
   font-size: 2.5rem;
+  text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
 }
 
 main {
@@ -460,8 +499,8 @@ main h3 .and {
 }
 
 main h3:nth-of-type(2), main h3:nth-of-type(3) {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
 }
 
 main p {
@@ -469,8 +508,8 @@ main p {
   color: #FEE;
   text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
   text-transform: lowercase;
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
 }
 
 main p .punctuation {
@@ -482,49 +521,17 @@ main p .value {
   font-style: italic;
 }
 
-.sidebar, .socialPanel {
-  z-index: 3;
-  width: 300px;
-  min-height: 100vh;
-  background-color: rgba(50, 32, 37, 0.9);
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  -webkit-transition: right 250ms ease-in-out;
-  transition: right 250ms ease-in-out;
+.sideBarToggle {
+  left: 0px;
 }
 
-.sidebar h2, .socialPanel h2 {
-  font-size: 4rem;
-  color: #FA7A55;
-  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
-  text-transform: lowercase;
-}
-
-.sidebar h3, .socialPanel h3 {
-  font-size: 2rem;
-  color: #F157ED;
-  text-shadow: 0px 0px 7px rgba(255, 238, 0, 0.5);
-  text-transform: lowercase;
-  text-align: center;
+.sideBarToggle .topBorder, .sideBarToggle .bottomBorder, .sideBarToggle .toggleButton {
+  left: 0px;
 }
 
 .sidebar {
   left: -300px;
-}
-
-.sidebar .topBorder {
   top: 0px;
-  left: 0px;
 }
 
 .sidebar .navList {
@@ -535,35 +542,34 @@ main p .value {
   color: #FEE;
   font-size: 2.5rem;
   text-align: center;
+  text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
 }
 
-.active {
-  left: 0px;
+.openLeft {
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
 }
 
-.socialPanel {
+.socialsToggle {
+  right: 0px;
+}
+
+.socialsToggle .topBorder, .socialsToggle .bottomBorder, .socialsToggle .socialsToggleButton {
+  right: 0px;
+}
+
+.socialsPanel {
   right: -300px;
   top: 0px;
 }
 
-.socialPanel .topBorder {
-  right: 0px;
-}
-
-.socialPanel .bottomBorder {
-  right: 0px;
-}
-
-.socialPanel .socialsToggle {
-  right: 0px;
-}
-
-.socialPanel .socialsList {
+.socialsPanel .socialsList {
   margin: 25%;
 }
 
-.open {
-  right: 0px;
+.openRight {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 footer {
@@ -571,10 +577,17 @@ footer {
   bottom: 0px;
 }
 
-footer p {
-  font-size: 2rem;
+footer p, footer .far {
   color: #BADA55;
   text-shadow: 0px 0px 7px rgba(222, 30, 126, 0.5);
-  font-weight: 700;
   text-align: center;
+}
+
+footer p {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+footer .far {
+  font-size: 1.6rem;
 }

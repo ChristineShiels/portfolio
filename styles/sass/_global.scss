@@ -49,8 +49,8 @@ p{
     flex-direction: column;
 }
 
-.topBorder {
-    top: 0;
+.topBorder, .bottomBorder {
+    top: 0px;
     background-color: $orange;
     display: block;
     width: 10px;
@@ -62,16 +62,18 @@ p{
 
 .bottomBorder {
     top: 30vh;
-    background-color: $orange;
-    display: block;
-    width: 10px;
     height: 70vh;
-    position: absolute;
-    z-index: 5;
-    border-radius: 10px;
 }
 
-.toggle, .socialsToggle {
+.sidebarToggle, .socialsToggle {
+    position: absolute;
+    top: 0px;
+    z-index: 6;
+    
+    transition: all 250ms ease-in-out;
+}
+
+.toggleButton, .socialsToggleButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,6 +85,32 @@ p{
     top: 21.5vh;
     border-radius: 10px;
     z-index: 5;
+}
+
+.sidebar, .socialsPanel {
+    z-index: 3;
+    width: 300px;
+    min-height: 100vh;
+    background-color: rgba( $black, 0.9);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: all 250ms ease-in-out;
+    h2 {
+        font-size: 4rem;
+        color: $orange;
+        @include textGlow($blue);
+        text-transform: lowercase;
+    }
+    h3 {
+        font-size: 2rem;
+        color: $purple;
+        @include textGlow($yellow);
+        text-transform: lowercase;
+        text-align: center;
+    }
 }
 
 .navList, .socialsList {
@@ -97,6 +125,7 @@ p{
 .far, .fab {
     color: $background;
     font-size: 2.5rem;
+    @include textGlow($background)
 }
 
 

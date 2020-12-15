@@ -68,7 +68,7 @@ main {
         }
         &:nth-of-type(2),
         &:nth-of-type(3) {
-            transform: translateX(20px);
+            transform: translateX(30px);
         }
     }
     p {
@@ -76,7 +76,7 @@ main {
         color: $background;
         @include textGlow($background);
         text-transform: lowercase;
-        transform: translateX(40px);
+        transform: translateX(60px);
         .punctuation {
             color: $blue;
             @include textGlow($blue);
@@ -87,38 +87,16 @@ main {
     }
 }
 
-.sidebar, .socialPanel {
-    z-index: 3;
-    width: 300px;
-    min-height: 100vh;
-    background-color: rgba( $black, 0.9);
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    transition: right 250ms ease-in-out;
-    h2 {
-        font-size: 4rem;
-        color: $orange;
-        @include textGlow($blue);
-        text-transform: lowercase;
-    }
-    h3 {
-        font-size: 2rem;
-        color: $purple;
-        @include textGlow($yellow);
-        text-transform: lowercase;
-        text-align: center;
+.sideBarToggle {
+    left: 0px;
+    .topBorder, .bottomBorder, .toggleButton {
+        left: 0px;
     }
 }
 
 .sidebar {
     left: -300px;
-    .topBorder {
-        top: 0px;
-        left: 0px;
-    }
+    top: 0px;
     .navList {
         margin: 50% 0;
     }
@@ -126,45 +104,48 @@ main {
         color: $background;
         font-size: 2.5rem;
         text-align: center;
+        @include textGlow($background)
     }
 
 }
 
-.active {
-    left: 0px;
+.openLeft {
+    transform: translateX(300px);
 }
 
-.socialPanel {
+.socialsToggle {
+    right: 0px;
+    .topBorder, .bottomBorder, .socialsToggleButton {
+        right: 0px;
+    }
+}
+
+.socialsPanel {
     right: -300px;
     top: 0px;
-    .topBorder {
-        right: 0px;
-    }
-    .bottomBorder {
-        right: 0px;
-    }
-    .socialsToggle {
-        right: 0px;
-    }
     .socialsList {
     margin: 25%;
     }
-    
 }
 
-.open {
-    right: 0px;
+.openRight {
+    transform: translateX(-300px);
 }
 
 footer {
     position: absolute;
     bottom: 0px;
-    p{
-        font-size: 2rem;
+    p, .far{
         color: $green;
         @include textGlow($pink);
-        font-weight: 700;
         text-align: center;
+    }
+    p {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .far {
+        font-size: 1.6rem;
     }
 }
 
