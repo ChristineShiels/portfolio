@@ -1,0 +1,42 @@
+$black: #322025;
+$green: #BADA55;
+$blue: #1CE;
+$yellow: #FE0;
+$pink: #DE1E7E;
+$orange: #FA7A55;
+$purple: #F157ED;
+$background: #FEE;
+
+@mixin textGlow($color) {
+    text-shadow: 0px 0px 10px rgba( $color, 0.5);
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.spanx {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.weirdFlexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.weirdFlexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+// font-family: 'Raleway', sans-serif;
