@@ -10,7 +10,6 @@ grrlApp.leftSlide = function() {
 
 grrlApp.rightSlide = function() {
     $('.socialsToggle').on('click', function(){
-        console.log("hello");
         $(this).toggleClass('openRight');
         $('.socialsPanel').toggleClass('openRight');
     })

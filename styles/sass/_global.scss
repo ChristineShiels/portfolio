@@ -24,13 +24,66 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     font-weight: 400;
+}
+h1 {
     text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.5rem;
+    color: $background;
+    text-transform: initial;
 }
 
 p{
     margin: 0;
     padding: 0;
     text-transform: lowercase;
+}
+
+.cashMoney, .tag {
+    color: $blue;
+}
+
+.smoothies {
+    color: $yellow;
+}
+
+.punctuation {
+    color: $purple;
+}
+
+.function {
+    color: $green;
+}
+
+.overlay {
+    position: absolute;
+    width: 50%;
+    max-width: 750px;
+    height: 100vh;
+    background-color: rgba( $black, 0.1);
+    z-index: 2;
+}
+
+ul, li {
+    
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    &:hover, &:focus{
+        box-shadow: 4px 8px $black, 6px 10px 5px $purple;
+        color: $yellow;
+        @include textGlow($purple)
+    }
+}
+
+li a {
+    &:hover, &:focus{
+        color: $yellow;
+    }
 }
 
 .grrl {
@@ -122,19 +175,10 @@ p{
         text-transform: lowercase;
         text-align: center;
     }
-    a {
-        &:hover, &:focus{
-            box-shadow: 4px 8px $black, 6px 10px 5px $purple;
-            color: $yellow;
-            @include textGlow($purple)
-        }
-    }
 }
 
 .navList, .socialsList {
     height: 50vh;
-    list-style: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
