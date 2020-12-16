@@ -627,6 +627,9 @@ footer .fa-copyright {
   height: 100vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about .aboutMe {
@@ -635,6 +638,9 @@ footer .fa-copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about .corset {
