@@ -11,31 +11,31 @@
     <title>thisGRRLcodes</title>
 </head>
 <body>
-    <aside class="sidebarToggle openLeft">
+    <aside class="sidebarToggle">
+        <button class="toggleButton">
+            <i class="far fa-compass"></i>
+        </button>
         <span class="topBorder"></span>
         <span class="bottomBorder"></span>
-        <div class="toggleButton">
-            <i class="far fa-compass"></i>
-        </div>
     </aside>
-    <aside class="sidebar openLeft">
+    <aside class="sidebar">
         <header class="sideHeader">
             <h2>this<span class="grrl">GRRL</span>codes</h2>
             <h3>check me out.</h3>
         </header>
         <nav class="sidebarNav ">
             <ul class="navList">
-                <li><a href="#"></a>Home</li>
-                <li><a href="#"></a>About</li>
-                <li><a href="#"></a>Projects</li>
-                <li><a href="#"></a>Contact</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
         <footer>
             <p><i class="far fa-copyright"></i> Christine Shiels 2020</p>
         </footer>
     </aside>
-    <main>
+    <header class="main">
         <div class="spanx weirdFlexRow">
             <section class="intro weirdFlexColumn">
                 <h1>
@@ -77,25 +77,54 @@
                 </div>
             </section>
         </div>
-    </main>
-    <aside class="socialsToggle openRight">
+    </header>
+    <section id="about" class="about weirdFlexColumn spanx">
+        <div class="aboutMe weirdFlexColumn">
+            <div class="corset">
+                <h2 class="topTitle"><span class="cashMoney">$</span><span class="smoothies">(</span><span class="punctuation">'</span>.aboutMe<span class="punctuation">'</span><span class="smoothies">)</span><span class="punctuation">.</span>before<span class="smoothies">(</span></h2>
+                <p><span class="punctuation">"</span><span class="tag">&lt;p&gt;</span>I earned a BSc (High Honours) and MSc (Great Distinction) in Geological Sciences from the University of Saskatchewan where I acquired an extensive background in science education and communication.<span class="tag">&lt;/p&gt;</span><span class="punctuation">"</span></p>
+                <h2><span class="smoothies">)</span><span class="punctuation">.</span>addClass<span class="smoothies">(</span><span class="punctuation">'</span><a href="https://junocollege.com/bootcamp/" target="_blank">Juno College Bootcamp</a><span class="punctuation">'</span><span class="smoothies">)</span><span class="punctuation">
+                <br>.</span>change<span class="smoothies">(</span>newSkills<span class="punctuation">,</span> <span class="function">function</span><span class="cashMoney">()</span><span class="punctuation">{</span></h2>
+                <p><span class="function">console<span class="punctuation">.</span></span><span class="cashMoney"><em>log</em></span><span class="smoothies">(</span><span class="punctuation">'</span>My love of learning and technology led me to build on the tech I learned in University (MATLAB, VBA, COMSOL, autoCAD, ArcGIS, and industry-specific software), by learning web development.<span class="punctuation">'</span><span class="smoothies">)</span><span class="punctuation">;</span></p>
+                <h2><span class="punctuation">}</span><span class="tag">return</span></h2>
+                <ul class="skillz weirdFlexRow">
+                    <li><i class="fab fa-html5"></i></li>
+                    <li><i class="fab fa-css3-alt"></i></li>
+                    <li><i class="fab fa-sass"></i></li>
+                    <li><i class="fab fa-js-square"></i></li>
+                    <li><img src="./assets/jQuery.png" alt="jQuery logo"></li>
+                    <li><i class="fab fa-react"></i></li>
+                    <li><i class="fab fa-github"></i></li>
+                    <li><img src="./assets/firebase.png" alt="firebase logo"></li>
+                    <li><img src="./assets/api.png" alt="API icon"></li>
+                    <li><i class="fas fa-universal-access"></i></li>
+                    <li><img src="./assets/responsive.png" alt="Responsive Design Icon"></li>
+                </ul>
+                <h2><span class="smoothies">)</span><span class="punctuation">;</span></h2>
+
+            </div>
+        </div>
+    </section>
+    <aside class="socialsToggle">
+        <button class="socialsToggleButton">
+            <i class="far fa-comment-dots"></i>
+        </button>
         <span class="topBorder"></span>
         <span class="bottomBorder"></span>
-        <div class="socialsToggleButton">
-            <i class="far fa-comment-dots"></i>
-        </div>
     </aside>
-    <aside class="socialsPanel openRight">
+    <aside class="socialsPanel">
         <h2>this<span class="grrl">GRRL</span>codes</h2>
         <h3>hit up my socials.</h3>
         <ul class="socialsList">
-            <li><a href="https://twitter.com/LaZRgrrl"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/christine-shiels/"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="https://github.com/ChristineShiels"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://twitter.com/LaZRgrrl" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/christine-shiels/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/ChristineShiels" target="_blank"><i class="fab fa-github"></i></a></li>
         </ul>
         <footer>
             <p><i class="far fa-copyright"></i> Christine Shiels 2020</p>
         </footer>
     </aside>
 </body>
+<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+<script src="./script.js"></script>
 </html>

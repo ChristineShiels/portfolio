@@ -11,8 +11,13 @@ $background: #FEE;
     text-shadow: 0px 0px 7px rgba( $color, 0.5);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inconsolata', monospace;
+    background-color: $background;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +60,7 @@ p{
     display: block;
     width: 10px;
     height: 20vh;
-    position: absolute;
+    position: fixed;
     z-index: 5;
     border-radius: 10px;
 }
@@ -66,30 +71,36 @@ p{
 }
 
 .sidebarToggle, .socialsToggle {
-    position: absolute;
+    position: fixed;
     top: 0px;
     z-index: 6;
-    
     transition: all 250ms ease-in-out;
+    &:hover > span, &:hover > button {
+        background-color: $blue;
+    }
 }
 
 .toggleButton, .socialsToggleButton {
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $orange;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     width: 7vh;
     height: 7vh;
     top: 21.5vh;
     border-radius: 10px;
     z-index: 5;
+    &:focus, &:focus ~ span {
+        background-color: $blue;
+    }
 }
 
 .sidebar, .socialsPanel {
     z-index: 3;
-    width: 300px;
+    width: 200px;
     min-height: 100vh;
     background-color: rgba( $black, 0.9);
     position: fixed;
@@ -99,7 +110,7 @@ p{
     padding: 20px;
     transition: all 250ms ease-in-out;
     h2 {
-        font-size: 4rem;
+        font-size: 3rem;
         color: $orange;
         @include textGlow($blue);
         text-transform: lowercase;
@@ -110,6 +121,13 @@ p{
         @include textGlow($yellow);
         text-transform: lowercase;
         text-align: center;
+    }
+    a {
+        &:hover, &:focus{
+            box-shadow: 4px 8px $black, 6px 10px 5px $purple;
+            color: $yellow;
+            @include textGlow($purple)
+        }
     }
 }
 
@@ -122,11 +140,13 @@ p{
     justify-content: space-between;
 }
 
-.far, .fab {
+.far, .fab, .fas {
     color: $background;
-    font-size: 2.5rem;
-    @include textGlow($background)
+    font-size: 5rem;
+    @include textGlow($background);
 }
+
+
 
 
 

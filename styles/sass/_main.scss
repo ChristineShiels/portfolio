@@ -1,4 +1,4 @@
-main {
+.main {
     background-color: $background;
     height: 100vh;
     section {
@@ -21,7 +21,7 @@ main {
         height: 100vh;
     }
     .overlay {
-        position: fixed;
+        position: absolute;
         width: 50%;
         max-width: 750px;
         height: 100vh;
@@ -33,21 +33,25 @@ main {
     }
     h1 {
         color: $orange;
-        @include textGlow($orange);
         font-size: 3rem;
+        strong{
+            @include textGlow($purple);
+        }
         .tag {
             color: $blue;
-            @include textGlow($blue);
+            @include textGlow($yellow);
         }
     }
     h2 {
         color: $yellow;
-        @include textGlow($yellow);
         font-size: 2.5rem;
         margin-bottom: 10%;
+        strong {
+        @include textGlow($purple);
+        }
         .tag {
             color: $purple;
-            @include textGlow($purple);
+            @include textGlow($yellow);
         }
     }
     .tag {
@@ -55,16 +59,14 @@ main {
     }
     h3 {
         color: $green;
-        @include textGlow($green);
+        @include textGlow($pink);
         font-size: 3rem;
         text-transform: lowercase;
         .punctuation {
             color: $pink;
-            @include textGlow($pink);
         }
         .and {
             color: $blue;
-            @include textGlow($blue);
         }
         &:nth-of-type(2),
         &:nth-of-type(3) {
@@ -74,12 +76,11 @@ main {
     p {
         font-size: 2rem;
         color: $background;
-        @include textGlow($background);
         text-transform: lowercase;
         transform: translateX(60px);
         .punctuation {
             color: $blue;
-            @include textGlow($blue);
+            @include textGlow($orange);
         }
         .value {
             font-style: italic;
@@ -95,7 +96,7 @@ main {
 }
 
 .sidebar {
-    left: -300px;
+    left: -200px;
     top: 0px;
     .navList {
         margin: 50% 0;
@@ -103,14 +104,14 @@ main {
     li {
         color: $background;
         font-size: 2.5rem;
+        font-weight: 700;
         text-align: center;
         @include textGlow($background)
     }
-
 }
 
 .openLeft {
-    transform: translateX(300px);
+    transform: translateX(200px);
 }
 
 .socialsToggle {
@@ -121,15 +122,21 @@ main {
 }
 
 .socialsPanel {
-    right: -300px;
+    right: -200px;
     top: 0px;
     .socialsList {
     margin: 25%;
     }
+    a {
+        &:hover > i, &:focus > i {
+            color: $yellow;
+            @include textGlow($purple)
+        }
+    }
 }
 
 .openRight {
-    transform: translateX(-300px);
+    transform: translateX(-200px);
 }
 
 footer {
@@ -139,13 +146,63 @@ footer {
         color: $green;
         @include textGlow($pink);
         text-align: center;
+        padding-bottom: 5%;
     }
     p {
         font-weight: 700;
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
-    .far {
+    .fa-copyright {
         font-size: 1.6rem;
     }
 }
 
+.about {
+    height: 100vh;
+    justify-content: space-around;
+    .aboutMe {
+        height: 85vh;
+        background-color: $black;
+        align-items: center;
+    }
+    .corset {
+        width: 75%;
+    }
+    h2 {
+        font-size: 3.5rem;
+        color: $background;
+        text-transform: initial;
+        padding-top: 5%;
+    }
+    .cashMoney, .tag {
+        color: $blue;
+    }
+    .smoothies {
+        color: $yellow;
+    }
+    .punctuation {
+        color: $purple;
+    }
+    p {
+        font-size: 1.8rem;
+        color: $background;
+        text-transform: initial;
+        transform: translateX(30px);
+    }
+    .function {
+        color: $green;
+    }
+}
+
+.skillz {
+    justify-content: space-around;
+    li {
+        margin-top: 5%;
+    }
+    i {
+        text-shadow: none;
+    }
+    img {
+        width: 45px;
+    }
+}

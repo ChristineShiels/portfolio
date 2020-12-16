@@ -255,8 +255,13 @@ figure {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inconsolata', monospace;
+  background-color: #FEE;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -309,7 +314,7 @@ p {
   display: block;
   width: 10px;
   height: 20vh;
-  position: absolute;
+  position: fixed;
   z-index: 5;
   border-radius: 10px;
 }
@@ -320,14 +325,19 @@ p {
 }
 
 .sidebarToggle, .socialsToggle {
-  position: absolute;
+  position: fixed;
   top: 0px;
   z-index: 6;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
+.sidebarToggle:hover > span, .sidebarToggle:hover > button, .socialsToggle:hover > span, .socialsToggle:hover > button {
+  background-color: #1CE;
+}
+
 .toggleButton, .socialsToggleButton {
+  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,7 +349,7 @@ p {
           align-items: center;
   background-color: #FA7A55;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   width: 7vh;
   height: 7vh;
   top: 21.5vh;
@@ -347,9 +357,13 @@ p {
   z-index: 5;
 }
 
+.toggleButton:focus, .toggleButton:focus ~ span, .socialsToggleButton:focus, .socialsToggleButton:focus ~ span {
+  background-color: #1CE;
+}
+
 .sidebar, .socialsPanel {
   z-index: 3;
-  width: 300px;
+  width: 200px;
   min-height: 100vh;
   background-color: rgba(50, 32, 37, 0.9);
   position: fixed;
@@ -369,7 +383,7 @@ p {
 }
 
 .sidebar h2, .socialsPanel h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #FA7A55;
   text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
   text-transform: lowercase;
@@ -381,6 +395,13 @@ p {
   text-shadow: 0px 0px 7px rgba(255, 238, 0, 0.5);
   text-transform: lowercase;
   text-align: center;
+}
+
+.sidebar a:hover, .sidebar a:focus, .socialsPanel a:hover, .socialsPanel a:focus {
+  -webkit-box-shadow: 4px 8px #322025, 6px 10px 5px #F157ED;
+          box-shadow: 4px 8px #322025, 6px 10px 5px #F157ED;
+  color: #FE0;
+  text-shadow: 0px 0px 7px rgba(241, 87, 237, 0.5);
 }
 
 .navList, .socialsList {
@@ -399,23 +420,23 @@ p {
           justify-content: space-between;
 }
 
-.far, .fab {
+.far, .fab, .fas {
   color: #FEE;
-  font-size: 2.5rem;
+  font-size: 5rem;
   text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
 }
 
-main {
+.main {
   background-color: #FEE;
   height: 100vh;
 }
 
-main section {
+.main section {
   width: 50%;
   height: 100vh;
 }
 
-main .weirdFlexRow {
+.main .weirdFlexRow {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -424,7 +445,7 @@ main .weirdFlexRow {
           align-items: center;
 }
 
-main .weirdFlexColumn {
+.main .weirdFlexColumn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -433,17 +454,17 @@ main .weirdFlexColumn {
           align-items: flex-start;
 }
 
-main .intro {
+.main .intro {
   background-color: #322025;
   padding-left: 10%;
 }
 
-main img {
+.main img {
   height: 100vh;
 }
 
-main .overlay {
-  position: fixed;
+.main .overlay {
+  position: absolute;
   width: 50%;
   max-width: 750px;
   height: 100vh;
@@ -454,70 +475,73 @@ main .overlay {
   z-index: 2;
 }
 
-main h1 {
+.main h1 {
   color: #FA7A55;
-  text-shadow: 0px 0px 7px rgba(250, 122, 85, 0.5);
   font-size: 3rem;
 }
 
-main h1 .tag {
-  color: #1CE;
-  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
+.main h1 strong {
+  text-shadow: 0px 0px 7px rgba(241, 87, 237, 0.5);
 }
 
-main h2 {
-  color: #FE0;
+.main h1 .tag {
+  color: #1CE;
   text-shadow: 0px 0px 7px rgba(255, 238, 0, 0.5);
+}
+
+.main h2 {
+  color: #FE0;
   font-size: 2.5rem;
   margin-bottom: 10%;
 }
 
-main h2 .tag {
-  color: #F157ED;
+.main h2 strong {
   text-shadow: 0px 0px 7px rgba(241, 87, 237, 0.5);
 }
 
-main .tag {
+.main h2 .tag {
+  color: #F157ED;
+  text-shadow: 0px 0px 7px rgba(255, 238, 0, 0.5);
+}
+
+.main .tag {
   text-transform: lowercase;
 }
 
-main h3 {
+.main h3 {
   color: #BADA55;
-  text-shadow: 0px 0px 7px rgba(186, 218, 85, 0.5);
+  text-shadow: 0px 0px 7px rgba(222, 30, 126, 0.5);
   font-size: 3rem;
   text-transform: lowercase;
 }
 
-main h3 .punctuation {
+.main h3 .punctuation {
   color: #DE1E7E;
-  text-shadow: 0px 0px 7px rgba(222, 30, 126, 0.5);
 }
 
-main h3 .and {
+.main h3 .and {
   color: #1CE;
-  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
 }
 
-main h3:nth-of-type(2), main h3:nth-of-type(3) {
+.main h3:nth-of-type(2), .main h3:nth-of-type(3) {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
 }
 
-main p {
+.main p {
   font-size: 2rem;
   color: #FEE;
-  text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
   text-transform: lowercase;
   -webkit-transform: translateX(60px);
           transform: translateX(60px);
 }
 
-main p .punctuation {
+.main p .punctuation {
   color: #1CE;
-  text-shadow: 0px 0px 7px rgba(17, 204, 238, 0.5);
+  text-shadow: 0px 0px 7px rgba(250, 122, 85, 0.5);
 }
 
-main p .value {
+.main p .value {
   font-style: italic;
 }
 
@@ -530,7 +554,7 @@ main p .value {
 }
 
 .sidebar {
-  left: -300px;
+  left: -200px;
   top: 0px;
 }
 
@@ -541,13 +565,14 @@ main p .value {
 .sidebar li {
   color: #FEE;
   font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
   text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
 }
 
 .openLeft {
-  -webkit-transform: translateX(300px);
-          transform: translateX(300px);
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
 }
 
 .socialsToggle {
@@ -559,7 +584,7 @@ main p .value {
 }
 
 .socialsPanel {
-  right: -300px;
+  right: -200px;
   top: 0px;
 }
 
@@ -567,9 +592,14 @@ main p .value {
   margin: 25%;
 }
 
+.socialsPanel a:hover > i, .socialsPanel a:focus > i {
+  color: #FE0;
+  text-shadow: 0px 0px 7px rgba(241, 87, 237, 0.5);
+}
+
 .openRight {
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
 }
 
 footer {
@@ -581,13 +611,80 @@ footer p, footer .far {
   color: #BADA55;
   text-shadow: 0px 0px 7px rgba(222, 30, 126, 0.5);
   text-align: center;
+  padding-bottom: 5%;
 }
 
 footer p {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
-footer .far {
+footer .fa-copyright {
   font-size: 1.6rem;
+}
+
+.about {
+  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about .aboutMe {
+  height: 85vh;
+  background-color: #322025;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .corset {
+  width: 75%;
+}
+
+.about h2 {
+  font-size: 3.5rem;
+  color: #FEE;
+  text-transform: initial;
+  padding-top: 5%;
+}
+
+.about .cashMoney, .about .tag {
+  color: #1CE;
+}
+
+.about .smoothies {
+  color: #FE0;
+}
+
+.about .punctuation {
+  color: #F157ED;
+}
+
+.about p {
+  font-size: 1.8rem;
+  color: #FEE;
+  text-transform: initial;
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.about .function {
+  color: #BADA55;
+}
+
+.skillz {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skillz li {
+  margin-top: 5%;
+}
+
+.skillz i {
+  text-shadow: none;
+}
+
+.skillz img {
+  width: 45px;
 }
