@@ -255,6 +255,68 @@ footer {
     textarea {
         resize: none;
     }
+    button {
+        background-color: transparent;
+        font-family: 'Sniglet', cursive;
+        font-size: 4rem;
+        letter-spacing: 2px;
+        color: rgba( $background, 0.5);
+        border: none;
+        border-radius: 40px;
+        padding: 5% 0;
+        transition: 3s;
+        height: 90px;
+        position: relative;
+        z-index: 5;
+        overflow: hidden;
+        &:hover, &:focus{
+            color: $background;
+            box-shadow: -45px 0 50px $purple, 45px 0 50px $green;
+            mix-blend-mode: exclusion;
+            text-shadow: 0px 0px 10px $black;
+            cursor: pointer;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: -27px;
+            left: 0px;
+            width: 90px;
+            height: 120px;
+            border-radius: 50%;
+            background: transparent;
+            filter: blur(5px);
+            transition: 3s;
+            z-index: -1;
+        }
+        &:hover:before, &:focus:before {
+            background: $purple;
+            transform: scaleX(6);
+            overflow: hidden;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 90px;
+            height: 120px;
+            border-radius: 50%;
+            background: transparent;
+            filter: blur(5px);
+            transition: 3s;
+            z-index: -1;
+            mix-blend-mode: exclusion;
+        }
+        &:hover:after, &:focus:after {
+            background: $green;
+            transform: scaleX(6);
+            overflow: hidden;
+        }
+        &:active {
+            color: $yellow;
+        }
+    }
     img, .bubbleMsg, .bubble{
         position: absolute;
     }
@@ -263,6 +325,7 @@ footer {
         right: 6%;
         top: 8%;
         transform: rotate(25deg);
+        
     }
     .bubbleMsg {
         font-family: 'Sniglet', cursive;
