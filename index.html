@@ -28,7 +28,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <footer>
@@ -38,42 +38,43 @@
     <header class="main">
         <div class="spanx weirdFlexRow">
             <section class="intro weirdFlexColumn">
-                <h1>
-                    <span class="tag">&lt;h1&gt; </span>Hello!
-                    <span class="tag"> &lt;/h1&gt;</span>
-                    <br>
-                    <span class="tag">&lt;h2&gt; </span>I am <strong>Christine Shiels</strong>
-                    <span class="tag"> &lt;/h2&gt;</span>
-                </h1>
-                <h2>
-                    <span class="tag">&lt;h3&gt; </span>A<strong> creative </strong>web developer
-                    <span class="tag"> &lt;/h3&gt;</span>
-                </h2>
-                <h3>
-                    <span class="punctuation">.</span>design
-                    <span class="punctuation"> {</span>
-                </h3>
-                <h3>
-                    <span class="and">&</span><span class="punctuation">:</span>develop
-                    <span class="punctuation"> {</span>
-                </h3>
-                <p>
-                    background<span class="punctuation">: </span>
-                    <span class="value">natural-science</span><span class="punctuation">, </span>education<span class="punctuation">;</span>
-                    <br>align-self<span class="punctuation">: </span> <span class="value">frontend-hypertext-asSassin</span><span class="punctuation">;</span>
-                    <br>direction<span class="punctuation">: </span>
-                    <span class="value">success</span><span class="punctuation">;</span>
-                </p>
-                <h3>
-                    <span class="punctuation">}</span>
-                </h3>
-                <h3>
-                    <span class="punctuation">}</span>
-                </h3>
+                <div class="introText">
+                    <h1>
+                        <span class="tag">&lt;h1&gt; </span>Hello!
+                        <span class="tag"> &lt;/h1&gt;</span>
+                        <br>
+                        <span class="tag">&lt;h2&gt; </span>I am <strong>Christine Shiels</strong>
+                        <span class="tag"> &lt;/h2&gt;</span>
+                    </h1>
+                    <h2>
+                        <span class="tag">&lt;h3&gt; </span>A<strong> creative </strong>web developer
+                        <span class="tag"> &lt;/h3&gt;</span>
+                    </h2>
+                    <h3>
+                        <span class="punctuation">.</span>design
+                        <span class="punctuation"> {</span>
+                    </h3>
+                    <h3>
+                        <span class="and">&</span><span class="punctuation">:</span>develop
+                        <span class="punctuation"> {</span>
+                    </h3>
+                    <p>
+                        background<span class="punctuation">: </span>
+                        <span class="value">natural-science</span><span class="punctuation">, </span>education<span class="punctuation">;</span>
+                        <br>align-self<span class="punctuation">: </span> <span class="value">frontend-hypertext-asSassin</span><span class="punctuation">;</span>
+                        <br>direction<span class="punctuation">: </span>
+                        <span class="value">success</span><span class="punctuation">;</span>
+                    </p>
+                    <h3>
+                        <span class="punctuation">}</span>
+                    </h3>
+                    <h3>
+                        <span class="punctuation">}</span>
+                    </h3>
+                </div>
             </section>
             <section class="photo">
                 <img src="./assets/neonFrame.jpg" alt="Strange girl growling and holding plastic dinosaur">
-                <div class="overlay"></div>
             </section>
         </div>
     </header>
@@ -107,12 +108,9 @@
     <section id="projects" class="projects">
         <div class="spanx weirdFlexRow">
             <section class="projectPortal weirdFlexColumn">
-                <!-- <div class="portalFrame "> -->
-                    <img src="./assets/neonFrameCodingNarrow.jpg" alt="neon sign that says coding">
-                <!-- </div> -->
-                <div class="overlay">
-                </div>
+                <img src="./assets/neonFrameCodingNarrow.jpg" alt="neon sign that says coding">
             </section>
+
             <section class="projectMenu weirdFlexColumn">
                 <h2><span class="punctuation">let </span>myProject <span class="punctuation">= </span><span class="function"><strong>document</strong></span><span class="punctuation">.</span><span class="cashMoney"><em>getElementById</em></span><span class="smoothies">(</span><span class="punctuation">"</span><span class="punctuation">"</span><span class="smoothies">)</span><span class="punctuation">;</span></h2>
                 <ul class="projectList"></ul>
@@ -122,6 +120,28 @@
                 <li><a href="#projects">#Project04</a></li>
                 <li><a href="#projects">#Project05</a></li>
             </section>
+        </div>
+    </section>
+    <section id="contact" class="contact weirdFlexColumn spanx">
+        <div class="contactForm weirdFlexColumn">
+            <div class="corset">
+                <form action="https://formspree.io/f/mjvpaqbg" method="POST" class="weirdFlexColumn">
+                    <label for="userName" class="srOnly">
+                        Please enter your name
+                    </label>
+                    <input type="text" name="userName" placeholder="name" required>
+                    <label for="userEmail" class="srOnly">
+                        Please enter your email
+                    </label>
+                    <input type="email" name="userEmail" placeholder="email" required>
+                    <label for="message" class="srOnly">
+                        Type your message here
+                    </label>
+                    <textarea name="message" placeholder="type your message here :)" minlength="15" maxlength="666" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+                <img src="./assets/Christine01Neon.jpg" alt="Strange girl looking longingly into her bright future">
+            </div>
         </div>
     </section>
     <aside class="socialsToggle">

@@ -11,6 +11,33 @@ $background: #FEE;
     text-shadow: 0px 0px 7px rgba( $color, 0.5);
 }
 
+@mixin placeholder-color($color1, $color2) {
+    @include neonifyText(($color2))
+    &::-webkit-input-placeholder {
+        color: $color1;
+        opacity: 0.9;
+    }
+    &:-moz-placeholder {
+        color: $color1;
+        opacity: 0.9;
+
+    }
+    &::-moz-placeholder {
+        opacity: 0.9;
+        color: $color1;
+    }
+    &:-ms-input-placeholder {
+        color: $color1;
+        opacity: 0.9;
+    }
+}
+
+@mixin neonifyText($color) {
+    color: $background;
+    text-shadow: 0px 0 10px $color, 0px 0 20px $color, 0px 0 30px $color, 0px 0 40px $color,0 0px 50px $color, 0px 0 75px $color, 0px 0 100px $color,
+    ;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -57,15 +84,6 @@ p{
     color: $green;
 }
 
-.overlay {
-    position: absolute;
-    width: 50%;
-    max-width: 750px;
-    height: 100vh;
-    background-color: rgba( $black, 0.1);
-    z-index: 2;
-}
-
 ul, li {
     
     list-style: none;
@@ -95,6 +113,11 @@ li a {
     max-width: 1500px;
     width: 100%;
     margin: 0 auto;
+}
+
+
+.corset {
+    width: 75%;
 }
 
 .weirdFlexRow {

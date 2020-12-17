@@ -302,15 +302,6 @@ p {
   color: #BADA55;
 }
 
-.overlay {
-  position: absolute;
-  width: 50%;
-  max-width: 750px;
-  height: 100vh;
-  background-color: rgba(50, 32, 37, 0.1);
-  z-index: 2;
-}
-
 ul, li {
   list-style: none;
   padding: 0;
@@ -336,6 +327,10 @@ li a:hover, li a:focus {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
+}
+
+.corset {
+  width: 75%;
 }
 
 .weirdFlexRow {
@@ -485,7 +480,17 @@ li a:hover, li a:focus {
           align-items: center;
 }
 
-.main .weirdFlexColumn {
+.main .intro {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #322025;
+}
+
+.main .introText {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -494,19 +499,8 @@ li a:hover, li a:focus {
           align-items: flex-start;
 }
 
-.main .intro {
-  background-color: #322025;
-  padding-left: 10%;
-}
-
 .main img {
   height: 100vh;
-}
-
-.main .overlay {
-  left: 50%;
-  top: 0;
-  bottom: 0;
 }
 
 .main h1 {
@@ -677,10 +671,6 @@ footer .fa-copyright {
           justify-content: center;
 }
 
-.about .corset {
-  width: 75%;
-}
-
 .about h2 {
   padding-top: 5%;
 }
@@ -746,10 +736,6 @@ footer .fa-copyright {
   height: 100vh;
 }
 
-.projects .overlay {
-  left: 0px;
-}
-
 .projects .projectMenu {
   background-color: #322025;
 }
@@ -770,4 +756,79 @@ footer .fa-copyright {
   font-weight: 700;
   text-align: center;
   text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
+}
+
+.contact {
+  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contactForm {
+  width: 100%;
+  height: 85vh;
+  background-color: #322025;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .corset {
+  height: 85vh;
+}
+
+.contact form {
+  width: 50%;
+  height: 85vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 4rem;
+}
+
+.contact input, .contact textarea {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #1CE;
+  color: #FEE;
+  text-shadow: 0px 0 10px #FA7A55, 0px 0 20px #FA7A55, 0px 0 30px #FA7A55, 0px 0 40px #FA7A55, 0 0px 50px #FA7A55, 0px 0 75px #FA7A55, 0px 0 100px #FA7A55;
+  overflow: auto;
+  padding: 5%;
+  color: #FEE;
+}
+
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
+  color: #FA7A55;
+  opacity: 0.9;
+}
+
+.contact input:-moz-placeholder, .contact textarea:-moz-placeholder {
+  color: #FA7A55;
+  opacity: 0.9;
+}
+
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
+  opacity: 0.9;
+  color: #FA7A55;
+}
+
+.contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
+  color: #FA7A55;
+  opacity: 0.9;
+}
+
+.contact textarea {
+  resize: none;
+}
+
+.contact img {
+  width: 25vw;
+  float: right;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
 }
