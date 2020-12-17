@@ -765,6 +765,7 @@ footer .fa-copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .contact .contactForm {
@@ -788,7 +789,7 @@ footer .fa-copyright {
   height: 85vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .contact input, .contact textarea {
@@ -796,29 +797,29 @@ footer .fa-copyright {
   border: 1px solid transparent;
   color: #1CE;
   color: #FEE;
-  text-shadow: 0px 0 10px #FA7A55, 0px 0 20px #FA7A55, 0px 0 30px #FA7A55, 0px 0 40px #FA7A55, 0 0px 50px #FA7A55, 0px 0 75px #FA7A55, 0px 0 100px #FA7A55;
+  text-shadow: 0px 0 10px #1CE, 0px 0 20px #1CE, 0px 0 30px #1CE, 0px 0 40px #1CE, 0 0px 50px #1CE, 0px 0 75px #1CE, 0px 0 100px #1CE;
   overflow: auto;
   padding: 5%;
   color: #FEE;
 }
 
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
-  color: #FA7A55;
+  color: #1CE;
   opacity: 0.9;
 }
 
 .contact input:-moz-placeholder, .contact textarea:-moz-placeholder {
-  color: #FA7A55;
+  color: #1CE;
   opacity: 0.9;
 }
 
 .contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
   opacity: 0.9;
-  color: #FA7A55;
+  color: #1CE;
 }
 
 .contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
-  color: #FA7A55;
+  color: #1CE;
   opacity: 0.9;
 }
 
@@ -826,9 +827,31 @@ footer .fa-copyright {
   resize: none;
 }
 
-.contact img {
-  width: 25vw;
-  float: right;
-  -webkit-transform: translateY(-120%);
-          transform: translateY(-120%);
+.contact img, .contact .bubbleMsg, .contact .bubble {
+  position: absolute;
+}
+
+.contact .bubble {
+  width: 500px;
+  right: 6%;
+  top: 8%;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.contact .bubbleMsg {
+  font-family: 'Sniglet', cursive;
+  font-size: 4.5rem;
+  right: 160px;
+  top: 175px;
+  line-height: 2;
+  z-index: 8;
+  color: #FEE;
+  text-shadow: 0px 0 10px #DE1E7E, 0px 0 20px #DE1E7E, 0px 0 30px #DE1E7E, 0px 0 40px #DE1E7E, 0 0px 50px #DE1E7E, 0px 0 75px #DE1E7E, 0px 0 100px #DE1E7E;
+}
+
+.contact .longing {
+  width: 400px;
+  right: 0;
+  bottom: 10%;
 }
