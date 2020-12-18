@@ -836,7 +836,7 @@ footer .fa-copyright {
 }
 
 .about .arrow {
-  bottom: 5%;
+  bottom: 10%;
 }
 
 .skillz {
@@ -976,12 +976,15 @@ footer .fa-copyright {
 .contact input, .contact textarea {
   background-color: transparent;
   border: 1px solid transparent;
+  border-radius: 10px;
   color: #1CE;
   color: #FEE;
   text-shadow: 0px 0 10px #1CE, 0px 0 20px #1CE, 0px 0 30px #1CE, 0px 0 40px #1CE, 0 0px 50px #1CE, 0px 0 75px #1CE, 0px 0 100px #1CE;
   overflow: auto;
   padding: 5%;
   color: #FEE;
+  -webkit-box-shadow: 0px 0 10px #322025, 0px 0 20px #322025, 0px 0 30px #322025, 0px 0 40px #322025, 0 0px 50px #322025, 0px 0 75px #322025, 0px 0 100px #DE1E7E;
+          box-shadow: 0px 0 10px #322025, 0px 0 20px #322025, 0px 0 30px #322025, 0px 0 40px #322025, 0 0px 50px #322025, 0px 0 75px #322025, 0px 0 100px #DE1E7E;
 }
 
 .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
@@ -1027,8 +1030,8 @@ footer .fa-copyright {
 
 .contact button:hover, .contact button:focus {
   color: #FEE;
-  -webkit-box-shadow: -45px 0 50px #F157ED, 45px 0 50px #BADA55;
-          box-shadow: -45px 0 50px #F157ED, 45px 0 50px #BADA55;
+  -webkit-box-shadow: -45px 0 50px #DE1E7E, 45px 0 50px #1CE;
+          box-shadow: -45px 0 50px #DE1E7E, 45px 0 50px #1CE;
   mix-blend-mode: exclusion;
   text-shadow: 0px 0px 10px #322025;
   cursor: pointer;
@@ -1037,10 +1040,10 @@ footer .fa-copyright {
 .contact button:before {
   content: '';
   position: absolute;
-  top: -27px;
+  top: -45px;
   left: 0px;
-  width: 90px;
-  height: 120px;
+  width: 100px;
+  height: 150px;
   border-radius: 50%;
   background: transparent;
   -webkit-filter: blur(5px);
@@ -1051,7 +1054,7 @@ footer .fa-copyright {
 }
 
 .contact button:hover:before, .contact button:focus:before {
-  background: #F157ED;
+  background: #DE1E7E;
   -webkit-transform: scaleX(6);
           transform: scaleX(6);
   overflow: hidden;
@@ -1060,10 +1063,10 @@ footer .fa-copyright {
 .contact button:after {
   content: '';
   position: absolute;
-  top: 0px;
+  top: -5px;
   right: 0px;
-  width: 90px;
-  height: 120px;
+  width: 100px;
+  height: 150px;
   border-radius: 50%;
   background: transparent;
   -webkit-filter: blur(5px);
@@ -1071,18 +1074,19 @@ footer .fa-copyright {
   -webkit-transition: 3s;
   transition: 3s;
   z-index: -1;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: soft-light;
 }
 
 .contact button:hover:after, .contact button:focus:after {
-  background: #BADA55;
+  background: #1CE;
   -webkit-transform: scaleX(6);
           transform: scaleX(6);
   overflow: hidden;
 }
 
 .contact button:active {
-  color: #FE0;
+  color: #FEE;
+  text-shadow: 0px 0 10px #F157ED, 0px 0 20px #F157ED, 0px 0 30px #F157ED, 0px 0 40px #F157ED, 0 0px 50px #F157ED, 0px 0 75px #F157ED, 0px 0 100px #F157ED;
 }
 
 .contact img, .contact .bubbleMsg, .contact .bubble {

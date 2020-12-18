@@ -190,7 +190,7 @@ footer {
         margin-top: 2%;
     }
     .arrow {
-        bottom: 5%;
+        bottom: 10%;
     }
 }
 
@@ -293,11 +293,13 @@ footer {
     input, textarea {
         background-color: transparent;
         border: 1px solid transparent;
+        border-radius: 10px;
         color: $blue;
         @include placeholder-color($blue, $blue);
         overflow: auto;
         padding: 5%;
         color: $background;
+        box-shadow: 0px 0 10px $black, 0px 0 20px $black, 0px 0 30px $black, 0px 0 40px $black,0 0px 50px $black, 0px 0 75px $black, 0px 0 100px $pink;
 
     }
     textarea {
@@ -319,7 +321,7 @@ footer {
         overflow: hidden;
         &:hover, &:focus{
             color: $background;
-            box-shadow: -45px 0 50px $purple, 45px 0 50px $green;
+            box-shadow: -45px 0 50px $pink, 45px 0 50px $blue;
             mix-blend-mode: exclusion;
             text-shadow: 0px 0px 10px $black;
             cursor: pointer;
@@ -327,10 +329,10 @@ footer {
         &:before {
             content: '';
             position: absolute;
-            top: -27px;
+            top: -45px;
             left: 0px;
-            width: 90px;
-            height: 120px;
+            width: 100px;
+            height: 150px;
             border-radius: 50%;
             background: transparent;
             filter: blur(5px);
@@ -338,31 +340,31 @@ footer {
             z-index: -1;
         }
         &:hover:before, &:focus:before {
-            background: $purple;
+            background: $pink;
             transform: scaleX(6);
             overflow: hidden;
         }
         &:after {
             content: '';
             position: absolute;
-            top: 0px;
+            top: -5px;
             right: 0px;
-            width: 90px;
-            height: 120px;
+            width: 100px;
+            height: 150px;
             border-radius: 50%;
             background: transparent;
             filter: blur(5px);
             transition: 3s;
             z-index: -1;
-            mix-blend-mode: exclusion;
+            mix-blend-mode: soft-light;
         }
         &:hover:after, &:focus:after {
-            background: $green;
+            background: $blue;
             transform: scaleX(6);
             overflow: hidden;
         }
         &:active {
-            color: $yellow;
+            @include neonifyText($purple);
         }
     }
     img, .bubbleMsg, .bubble{

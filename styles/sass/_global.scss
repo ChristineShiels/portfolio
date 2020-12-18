@@ -34,7 +34,7 @@ $background: #FEE;
 
 @mixin neonifyText($color) {
     color: $background;
-    text-shadow: 0px 0 10px $color, 0px 0 20px $color, 0px 0 30px $color, 0px 0 40px $color,0 0px 50px $color, 0px 0 75px $color, 0px 0 100px $color,
+    text-shadow: 0px 0 10px $color, 0px 0 20px $color, 0px 0 30px $color, 0px 0 40px $color,0 0px 50px $color, 0px 0 75px $color, 0px 0 100px $color
     ;
 }
 
