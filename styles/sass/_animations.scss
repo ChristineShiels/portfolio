@@ -55,3 +55,31 @@
     color: $yellow;
     }
 }
+
+.flickerArrow {
+    animation: flickerArrow 300ms ease-in-out infinite;
+    -moz-animation: flickerArrow 300ms ease-in-out infinite;
+    -webkit-animation: flickerArrow 300ms ease-in-out infinite;
+    -o-animation: flickerArrow 300ms ease-in-out infinite;
+}
+
+@keyframes flickerArrow {
+0%,
+100% {
+-webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+@include neonifyText($green);
+}
+20% {
+-webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+@include neonifyText($black);
+color: $black;
+}
+}

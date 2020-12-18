@@ -146,10 +146,33 @@ footer {
     }
 }
 
+.arrow {
+    position: absolute;
+    bottom: 10px;
+    // // transform: translateY(50%);
+    // // transform: translateX(50%);
+    left: 50vw;
+    margin: -24px 0 0 -24px;
+    align-self: flex-end;
+    justify-self: center;
+    a{
+        &:hover, &:focus {
+            box-shadow: none;
+        }
+    }
+    i{
+        &:hover, &:focus {
+            @include neonifyText($green);
+            animation: none;
+        }
+    }
+}
+
 .about {
     height: 100vh;
     justify-content: space-around;
     align-items: center;
+    position: relative;
     .aboutMe {
         height: 85vh;
         background-color: $black;
@@ -157,7 +180,7 @@ footer {
         justify-content: center;
     }
     h2 {
-        padding-top: 5%;
+        padding-top: 2.5%;
     }
     p {
         font-size: 1.8rem;
@@ -165,6 +188,9 @@ footer {
         text-transform: initial;
         transform: translateX(30px);
         margin-top: 2%;
+    }
+    .arrow {
+        bottom: 60px;
     }
 }
 
@@ -182,6 +208,7 @@ footer {
 }
 
 .projects {
+    position: relative;
     height: 100vh;
     section {
         width: 50%;

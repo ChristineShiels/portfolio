@@ -546,6 +546,47 @@ li a:hover, li a:focus {
   }
 }
 
+.flickerArrow {
+  animation: flickerArrow 300ms ease-in-out infinite;
+  -moz-animation: flickerArrow 300ms ease-in-out infinite;
+  -webkit-animation: flickerArrow 300ms ease-in-out infinite;
+  -o-animation: flickerArrow 300ms ease-in-out infinite;
+}
+
+@-webkit-keyframes flickerArrow {
+  0%,
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    color: #FEE;
+    text-shadow: 0px 0 10px #BADA55, 0px 0 20px #BADA55, 0px 0 30px #BADA55, 0px 0 40px #BADA55, 0 0px 50px #BADA55, 0px 0 75px #BADA55, 0px 0 100px #BADA55;
+  }
+  20% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    color: #FEE;
+    text-shadow: 0px 0 10px #322025, 0px 0 20px #322025, 0px 0 30px #322025, 0px 0 40px #322025, 0 0px 50px #322025, 0px 0 75px #322025, 0px 0 100px #322025;
+    color: #322025;
+  }
+}
+
+@keyframes flickerArrow {
+  0%,
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    color: #FEE;
+    text-shadow: 0px 0 10px #BADA55, 0px 0 20px #BADA55, 0px 0 30px #BADA55, 0px 0 40px #BADA55, 0 0px 50px #BADA55, 0px 0 75px #BADA55, 0px 0 100px #BADA55;
+  }
+  20% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    color: #FEE;
+    text-shadow: 0px 0 10px #322025, 0px 0 20px #322025, 0px 0 30px #322025, 0px 0 40px #322025, 0 0px 50px #322025, 0px 0 75px #322025, 0px 0 100px #322025;
+    color: #322025;
+  }
+}
+
 .main {
   height: 100vh;
 }
@@ -737,6 +778,29 @@ footer .fa-copyright {
   font-size: 1.6rem;
 }
 
+.arrow {
+  position: absolute;
+  bottom: 10px;
+  left: 50vw;
+  margin: -24px 0 0 -24px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.arrow a:hover, .arrow a:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.arrow i:hover, .arrow i:focus {
+  color: #FEE;
+  text-shadow: 0px 0 10px #BADA55, 0px 0 20px #BADA55, 0px 0 30px #BADA55, 0px 0 40px #BADA55, 0 0px 50px #BADA55, 0px 0 75px #BADA55, 0px 0 100px #BADA55;
+  -webkit-animation: none;
+          animation: none;
+}
+
 .about {
   height: 100vh;
   -ms-flex-pack: distribute;
@@ -744,6 +808,7 @@ footer .fa-copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .about .aboutMe {
@@ -758,7 +823,7 @@ footer .fa-copyright {
 }
 
 .about h2 {
-  padding-top: 5%;
+  padding-top: 2.5%;
 }
 
 .about p {
@@ -768,6 +833,10 @@ footer .fa-copyright {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
   margin-top: 2%;
+}
+
+.about .arrow {
+  bottom: 60px;
 }
 
 .skillz {
@@ -788,6 +857,7 @@ footer .fa-copyright {
 }
 
 .projects {
+  position: relative;
   height: 100vh;
 }
 
