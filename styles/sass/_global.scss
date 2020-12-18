@@ -12,7 +12,7 @@ $background: #FEE;
 }
 
 @mixin placeholder-color($color1, $color2) {
-    @include neonifyText(($color2))
+    @include neonifyText(($color2));
     &::-webkit-input-placeholder {
         color: $color1;
         opacity: 0.9;
@@ -212,6 +212,7 @@ li a {
     font-size: 5rem;
     @include textGlow($background);
 }
+
 
 
 

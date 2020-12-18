@@ -23,20 +23,20 @@
     h1 {
         color: $orange;
         font-size: 3rem;
-        strong{
-            @include textGlow($purple);
-        }
         .tag {
             color: $blue;
             @include textGlow($yellow);
+        }
+        .neon {
+            @include neonifyText($orange);
         }
     }
     h2 {
         color: $yellow;
         font-size: 2.5rem;
         margin-bottom: 10%;
-        strong {
-        @include textGlow($purple);
+        .neon {
+        @include neonifyText($yellow);
         }
         .tag {
             color: $purple;
@@ -325,7 +325,6 @@ footer {
         right: 6%;
         top: 8%;
         transform: rotate(25deg);
-        
     }
     .bubbleMsg {
         font-family: 'Sniglet', cursive;
