@@ -781,8 +781,8 @@ footer .fa-copyright {
 .arrow {
   position: absolute;
   bottom: 10px;
-  left: 50vw;
-  margin: -24px 0 0 -24px;
+  left: 50%;
+  margin: -24px 0 0 -16px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   -ms-grid-column-align: center;
@@ -836,7 +836,7 @@ footer .fa-copyright {
 }
 
 .about .arrow {
-  bottom: 60px;
+  bottom: 5%;
 }
 
 .skillz {
@@ -889,6 +889,7 @@ footer .fa-copyright {
 }
 
 .projects img {
+  width: 100%;
   height: 100vh;
   -webkit-transition: 5s ease-in-out;
   transition: 5s ease-in-out;
