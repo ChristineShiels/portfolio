@@ -814,12 +814,14 @@ footer .fa-copyright {
           align-items: center;
 }
 
-.projects .portalFrame {
-  width: 90%;
+.projects .projectPortal {
+  position: relative;
 }
 
 .projects img {
   height: 100vh;
+  -webkit-transition: 5s ease-in-out;
+  transition: 5s ease-in-out;
 }
 
 .projects .projectMenu {
@@ -831,7 +833,8 @@ footer .fa-copyright {
 }
 
 .projects li {
-  margin-top: 5%;
+  margin-top: 10%;
+  text-align: center;
 }
 
 .projects a {
@@ -842,6 +845,27 @@ footer .fa-copyright {
   font-weight: 700;
   text-align: center;
   text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
+}
+
+.projects .project {
+  font-family: 'Sniglet', cursive;
+  color: #FEE;
+  text-shadow: 0px 0 10px #DE1E7E, 0px 0 20px #DE1E7E, 0px 0 30px #DE1E7E, 0px 0 40px #DE1E7E, 0 0px 50px #DE1E7E, 0px 0 75px #DE1E7E, 0px 0 100px #DE1E7E;
+  position: absolute;
+  bottom: 15px;
+}
+
+.projects .projectText {
+  position: absolute;
+  top: 20px;
+  width: 85%;
+  padding: 1% 2%;
+  color: #FEE;
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgba(50, 32, 37, 0.5);
+  border: 2px solid #FEE;
+  border-radius: 10px;
 }
 
 .contact {

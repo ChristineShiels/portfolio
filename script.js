@@ -26,10 +26,21 @@ grrlApp.navSlide = function() {
     })
 }
 
+grrlApp.projectSwitch = function() {
+    $(".projectList a").on("click", function(e) {
+        console.log(this);
+        if ($(this).hasClass("project01")) {
+            console.log("project01");
+            $(".projectPortal").hide().html('<p class="projectText">My first jQuery project - a simple text adventure built in one week</p><img src="./assets/neonFramejQueryAdventure.jpg" alt="choose your own adventure style web app"><a class="project" href="https://christineshiels.github.io/">click to view project</a> ').slideUp(700).slideDown(700);
+        }
+    })
+}
+
 grrlApp.init = () => {
     grrlApp.leftSlide();
     grrlApp.rightSlide();
     grrlApp.navSlide();
+    grrlApp.projectSwitch();
 }
 
 
