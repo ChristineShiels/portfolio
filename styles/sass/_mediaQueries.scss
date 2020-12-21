@@ -1,0 +1,191 @@
+@media (max-width: 1080px) {
+    h2 {
+        font-size: 3rem;
+    }
+    .far, .fab, .fas, a{
+        font-size: 4rem;
+    }
+    .main {
+        h1, h3{
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+    .arrow{
+        margin: -24px 0 0 -13px;
+    }
+    .skillz {
+        img{
+            width: 40px;
+        }
+    }
+    .contact {
+        .bubble{
+            width: 400px;
+            right: 2%;
+            top: 10%;
+        }
+        .bubbleMsg {
+            font-size: 4rem;
+            right: 120px;
+            top: 130px;
+        }
+        .longing {
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 960px){
+    .spanx {
+        max-width: 960;
+    }
+    .main{
+        position: relative;
+        height: 200vh;
+        section {
+            background-color: $black;
+            width: 100%;
+        }
+        .weirdFlexRow{
+            flex-direction: column;
+        }
+        h1, h2, h3{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 2.5rem;
+        }
+    }
+    .projects {
+        height: 200vh;
+        section {
+            background-color: $black;
+            width: 100%;
+        }
+        .weirdFlexRow{
+            flex-direction: column;
+        }
+        h2 {
+            text-align: center;
+        }
+        img {
+            width: auto;
+        }
+    }
+    .contact {
+        height: 200vh;
+        .corset, .contactForm{
+            height: 185vh;
+        }
+        .corset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            position: absolute;
+            bottom: 15vh;
+            align-items: center;
+        }
+        button {
+            margin-top: 25px;
+        }
+        .bubble {
+            left: 25%;
+            top: 5%;
+        }
+        .longing {
+            top: 30%;
+            right: 15%;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .about{
+        h2, a{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+    }
+    .contact{
+        form{
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .main{
+        h1, h2, h3{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+    }
+    .sidebar, .socialsPanel {
+        width: 130px;
+        h2, a {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+    }
+    .sidebar {
+        left: -130px;
+    }
+    .openLeft {
+        transform: translateX(130px);
+    }
+    .socialsPanel {
+        right: -130px;
+    }
+    .openRight {
+        transform: translateX(-130px);
+    }
+    .skillz {
+        flex-wrap: wrap;
+        li {
+            margin: 0 2%;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .main{
+        h1, h2, h3{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+    }
+    .about{
+        h2, a{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+    }
+    .contact{
+        form {
+            font-size: 2rem;
+        }
+        button{
+            font-size: 2rem;
+        }
+    }
+    .projects {
+        h2, a {
+            font-size: 2.5rem;
+        }
+    }
+}

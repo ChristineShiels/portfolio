@@ -626,6 +626,7 @@ li a:hover, li a:focus {
 
 .main img {
   height: 100vh;
+  margin: 0 auto;
 }
 
 .main h1 {
@@ -685,6 +686,7 @@ li a:hover, li a:focus {
 
 .main p {
   font-size: 2rem;
+  line-height: 1.5;
   color: #FEE;
   text-transform: lowercase;
   -webkit-transform: translateX(60px);
@@ -1019,7 +1021,7 @@ footer .fa-copyright {
   color: rgba(255, 238, 238, 0.5);
   border: none;
   border-radius: 50px;
-  padding: 3% 0;
+  padding: 3% 1%;
   -webkit-transition: 3s;
   transition: 3s;
   height: 70px;
@@ -1116,4 +1118,194 @@ footer .fa-copyright {
   width: 400px;
   right: 0;
   bottom: 10%;
+}
+
+@media (max-width: 1080px) {
+  h2 {
+    font-size: 3rem;
+  }
+  .far, .fab, .fas, a {
+    font-size: 4rem;
+  }
+  .main h1, .main h3 {
+    font-size: 2.5rem;
+  }
+  .main p {
+    font-size: 1.6rem;
+  }
+  .arrow {
+    margin: -24px 0 0 -13px;
+  }
+  .skillz img {
+    width: 40px;
+  }
+  .contact .bubble {
+    width: 400px;
+    right: 2%;
+    top: 10%;
+  }
+  .contact .bubbleMsg {
+    font-size: 4rem;
+    right: 120px;
+    top: 130px;
+  }
+  .contact .longing {
+    width: 300px;
+  }
+}
+
+@media (max-width: 960px) {
+  .spanx {
+    max-width: 960;
+  }
+  .main {
+    position: relative;
+    height: 200vh;
+  }
+  .main section {
+    background-color: #322025;
+    width: 100%;
+  }
+  .main .weirdFlexRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main h1, .main h2, .main h3 {
+    font-size: 3rem;
+  }
+  .main p {
+    font-size: 2.5rem;
+  }
+  .projects {
+    height: 200vh;
+  }
+  .projects section {
+    background-color: #322025;
+    width: 100%;
+  }
+  .projects .weirdFlexRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects h2 {
+    text-align: center;
+  }
+  .projects img {
+    width: auto;
+  }
+  .contact {
+    height: 200vh;
+  }
+  .contact .corset, .contact .contactForm {
+    height: 185vh;
+  }
+  .contact .corset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact form {
+    position: absolute;
+    bottom: 15vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact button {
+    margin-top: 25px;
+  }
+  .contact .bubble {
+    left: 25%;
+    top: 5%;
+  }
+  .contact .longing {
+    top: 30%;
+    right: 15%;
+  }
+}
+
+@media (max-width: 750px) {
+  .about h2, .about a {
+    font-size: 2.5rem;
+  }
+  .about p {
+    font-size: 1.6rem;
+  }
+  .contact form {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .main h1, .main h2, .main h3 {
+    font-size: 2.5rem;
+  }
+  .main p {
+    font-size: 2rem;
+  }
+  .sidebar, .socialsPanel {
+    width: 130px;
+  }
+  .sidebar h2, .sidebar a, .socialsPanel h2, .socialsPanel a {
+    font-size: 2rem;
+  }
+  .sidebar h3, .socialsPanel h3 {
+    font-size: 1.6rem;
+  }
+  .sidebar {
+    left: -130px;
+  }
+  .openLeft {
+    -webkit-transform: translateX(130px);
+            transform: translateX(130px);
+  }
+  .socialsPanel {
+    right: -130px;
+  }
+  .openRight {
+    -webkit-transform: translateX(-130px);
+            transform: translateX(-130px);
+  }
+  .skillz {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skillz li {
+    margin: 0 2%;
+  }
+}
+
+@media (max-width: 570px) {
+  .main h1, .main h2, .main h3 {
+    font-size: 2rem;
+  }
+  .main p {
+    font-size: 1.6rem;
+  }
+  .about h2, .about a {
+    font-size: 2rem;
+  }
+  .about p {
+    font-size: 1.6rem;
+  }
+  .contact form {
+    font-size: 2rem;
+  }
+  .contact button {
+    font-size: 2rem;
+  }
+  .projects h2, .projects a {
+    font-size: 2.5rem;
+  }
 }
