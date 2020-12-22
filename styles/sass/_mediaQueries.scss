@@ -37,7 +37,6 @@
         }
     }
 }
-
 @media (max-width: 960px){
     .spanx {
         max-width: 960;
@@ -51,6 +50,7 @@
         }
         .weirdFlexRow{
             flex-direction: column;
+            align-items: center;
         }
         h1, h2, h3{
             font-size: 3rem;
@@ -67,6 +67,7 @@
         }
         .weirdFlexRow{
             flex-direction: column;
+            align-items: center;
         }
         h2 {
             text-align: center;
@@ -152,6 +153,7 @@
     }
     .skillz {
         flex-wrap: wrap;
+        align-items: center;
         li {
             margin: 0 2%;
         }

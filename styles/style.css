@@ -1171,6 +1171,9 @@ footer .fa-copyright {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .main h1, .main h2, .main h3 {
     font-size: 3rem;
@@ -1190,6 +1193,9 @@ footer .fa-copyright {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .projects h2 {
     text-align: center;
@@ -1280,6 +1286,9 @@ footer .fa-copyright {
   .skillz {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .skillz li {
     margin: 0 2%;
