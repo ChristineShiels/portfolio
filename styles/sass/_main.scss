@@ -369,7 +369,11 @@ footer {
             @include neonifyText($purple);
         }
     }
+<<<<<<< HEAD
     .bubble, .bubbleMsg, img{
+=======
+    img, .bubbleMsg, .bubble{
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
         position: absolute;
     }
     .bubble {
@@ -383,6 +387,10 @@ footer {
         font-size: 4.5rem;
         right: 160px;
         top: 175px;
+<<<<<<< HEAD
+=======
+        // transform: rotate(-4deg);
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
         line-height: 2;
         z-index: 8;
         @include neonifyText($pink)

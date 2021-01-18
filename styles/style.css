@@ -1091,7 +1091,11 @@ footer .fa-copyright {
   text-shadow: 0px 0 10px #F157ED, 0px 0 20px #F157ED, 0px 0 30px #F157ED, 0px 0 40px #F157ED, 0 0px 50px #F157ED, 0px 0 75px #F157ED, 0px 0 100px #F157ED;
 }
 
+<<<<<<< HEAD
 .contact .bubble, .contact .bubbleMsg, .contact img {
+=======
+.contact img, .contact .bubbleMsg, .contact .bubble {
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
   position: absolute;
 }
 
@@ -1160,15 +1164,22 @@ footer .fa-copyright {
   }
   .main {
     position: relative;
+<<<<<<< HEAD
     height: 50%;
+=======
+    height: 200vh;
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
   }
   .main section {
     background-color: #322025;
     width: 100%;
+<<<<<<< HEAD
     height: 50vh;
   }
   .main section img {
     height: 50vh;
+=======
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
   }
   .main .weirdFlexRow {
     -webkit-box-orient: vertical;
@@ -1208,10 +1219,17 @@ footer .fa-copyright {
     width: auto;
   }
   .contact {
+<<<<<<< HEAD
     height: 100vh;
   }
   .contact .corset, .contact .contactForm {
     height: 85vh;
+=======
+    height: 200vh;
+  }
+  .contact .corset, .contact .contactForm {
+    height: 185vh;
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
   }
   .contact .corset {
     display: -webkit-box;
@@ -1227,7 +1245,11 @@ footer .fa-copyright {
   }
   .contact form {
     position: absolute;
+<<<<<<< HEAD
     bottom: 5%;
+=======
+    bottom: 15vh;
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1236,6 +1258,7 @@ footer .fa-copyright {
     margin-top: 25px;
   }
   .contact .bubble {
+<<<<<<< HEAD
     width: 325px;
     left: 75px;
     top: 0;
@@ -1263,22 +1286,34 @@ footer .fa-copyright {
   }
   .contact button {
     font-size: 3rem;
+=======
+    left: 25%;
+    top: 5%;
+  }
+  .contact .longing {
+    top: 30%;
+    right: 15%;
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
   }
 }
 
 @media (max-width: 750px) {
+<<<<<<< HEAD
   .main h1, .main h2, .main h3 {
     font-size: 2rem;
   }
   .main p {
     font-size: 1.6rem;
   }
+=======
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
   .about h2, .about a {
     font-size: 2.5rem;
   }
   .about p {
     font-size: 1.6rem;
   }
+<<<<<<< HEAD
   .contact form input, .contact form textarea {
     margin: 10px 0;
   }
@@ -1301,6 +1336,10 @@ footer .fa-copyright {
   }
   .contact .longing {
     width: 250px;
+=======
+  .contact form {
+    font-size: 3rem;
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
   }
 }
 
@@ -1365,9 +1404,12 @@ footer .fa-copyright {
   .contact button {
     font-size: 2rem;
   }
+<<<<<<< HEAD
   .contact .longing {
     width: 200px;
   }
+=======
+>>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
   .projects h2, .projects a {
     font-size: 2.5rem;
   }
