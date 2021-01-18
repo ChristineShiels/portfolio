@@ -43,7 +43,6 @@
     }
     .main{
         position: relative;
-<<<<<<< HEAD
         height: 50%;
         section {
             background-color: $black;
@@ -52,12 +51,6 @@
             img {
                 height: 50vh;
             }
-=======
-        height: 200vh;
-        section {
-            background-color: $black;
-            width: 100%;
->>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
         }
         .weirdFlexRow{
             flex-direction: column;
@@ -88,15 +81,9 @@
         }
     }
     .contact {
-<<<<<<< HEAD
         height: 100vh;
         .corset, .contactForm{
             height: 85vh;
-=======
-        height: 200vh;
-        .corset, .contactForm{
-            height: 185vh;
->>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
         }
         .corset {
             display: flex;
@@ -105,18 +92,13 @@
         }
         form {
             position: absolute;
-<<<<<<< HEAD
             bottom: 5%;
-=======
-            bottom: 15vh;
->>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
             align-items: center;
         }
         button {
             margin-top: 25px;
         }
         .bubble {
-<<<<<<< HEAD
             width: 325px;
             left: 75px;
             top: 0;
@@ -144,20 +126,11 @@
         }
         button {
             font-size: 3rem;
-=======
-            left: 25%;
-            top: 5%;
-        }
-        .longing {
-            top: 30%;
-            right: 15%;
->>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
         }
     }
 }
 
 @media (max-width: 750px) {
-<<<<<<< HEAD
     .main {
         h1, h2, h3{
             font-size: 2rem;
@@ -166,8 +139,6 @@
             font-size: 1.6rem;
         }
     }
-=======
->>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
     .about{
         h2, a{
             font-size: 2.5rem;
@@ -178,7 +149,6 @@
     }
     .contact{
         form{
-<<<<<<< HEAD
             input, textarea {
                 margin: 10px 0;
             }
@@ -201,9 +171,6 @@
         }
         .longing {
             width: 250px;
-=======
-            font-size: 3rem;
->>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
         }
     }
 }
@@ -271,12 +238,9 @@
         button{
             font-size: 2rem;
         }
-<<<<<<< HEAD
         .longing {
             width: 200px;
         }
-=======
->>>>>>> c7fdb45b686b9e87c236682b03e8c2dae5345922
     }
     .projects {
         h2, a {
