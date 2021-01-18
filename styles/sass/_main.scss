@@ -246,16 +246,22 @@ footer {
         color: $background;
         background-color: transparent;
         border: none;
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 700;
         text-align: center;
         @include textGlow($background)
     }
-    .project {
+    .project, .live, .video {
         font-family: 'Sniglet', cursive;
         @include neonifyText($pink);
         position: absolute;
         bottom: 15px;
+    }
+    .live {
+        left: 15px;
+    }
+    .project {
+        right: 15px;
     }
     .projectText {
         position: absolute;

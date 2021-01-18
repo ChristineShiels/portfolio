@@ -914,18 +914,26 @@ footer .fa-copyright {
   color: #FEE;
   background-color: transparent;
   border: none;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   text-align: center;
   text-shadow: 0px 0px 7px rgba(255, 238, 238, 0.5);
 }
 
-.projects .project {
+.projects .project, .projects .live, .projects .video {
   font-family: 'Sniglet', cursive;
   color: #FEE;
   text-shadow: 0px 0 10px #DE1E7E, 0px 0 20px #DE1E7E, 0px 0 30px #DE1E7E, 0px 0 40px #DE1E7E, 0 0px 50px #DE1E7E, 0px 0 75px #DE1E7E, 0px 0 100px #DE1E7E;
   position: absolute;
   bottom: 15px;
+}
+
+.projects .live {
+  left: 15px;
+}
+
+.projects .project {
+  right: 15px;
 }
 
 .projects .projectText {
