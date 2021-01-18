@@ -11,6 +11,33 @@ $background: #FEE;
     text-shadow: 0px 0px 7px rgba( $color, 0.5);
 }
 
+@mixin placeholder-color($color1, $color2) {
+    @include neonifyText(($color2));
+    &::-webkit-input-placeholder {
+        color: $color1;
+        opacity: 0.9;
+    }
+    &:-moz-placeholder {
+        color: $color1;
+        opacity: 0.9;
+
+    }
+    &::-moz-placeholder {
+        opacity: 0.9;
+        color: $color1;
+    }
+    &:-ms-input-placeholder {
+        color: $color1;
+        opacity: 0.9;
+    }
+}
+
+@mixin neonifyText($color) {
+    color: $background;
+    text-shadow: 0px 0 10px $color, 0px 0 20px $color, 0px 0 30px $color, 0px 0 40px $color,0 0px 50px $color, 0px 0 75px $color, 0px 0 100px $color
+    ;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -24,13 +51,57 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     font-weight: 400;
+}
+h1 {
     text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.5rem;
+    color: $background;
+    text-transform: initial;
 }
 
 p{
     margin: 0;
     padding: 0;
     text-transform: lowercase;
+}
+
+.cashMoney, .tag {
+    color: $blue;
+}
+
+.smoothies {
+    color: $yellow;
+}
+
+.punctuation {
+    color: $purple;
+}
+
+.function {
+    color: $green;
+}
+
+ul, li {
+    
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    &:hover, &:focus{
+        box-shadow: 4px 8px $black, 6px 10px 5px $purple;
+        color: $yellow;
+        @include textGlow($purple)
+    }
+}
+
+li a {
+    &:hover, &:focus{
+        color: $yellow;
+    }
 }
 
 .grrl {
@@ -42,6 +113,10 @@ p{
     max-width: 1500px;
     width: 100%;
     margin: 0 auto;
+}
+
+.corset {
+    width: 75%;
 }
 
 .weirdFlexRow {
@@ -122,19 +197,10 @@ p{
         text-transform: lowercase;
         text-align: center;
     }
-    a {
-        &:hover, &:focus{
-            box-shadow: 4px 8px $black, 6px 10px 5px $purple;
-            color: $yellow;
-            @include textGlow($purple)
-        }
-    }
 }
 
 .navList, .socialsList {
     height: 50vh;
-    list-style: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -150,4 +216,3 @@ p{
 
 
 
-// font-family: 'Raleway', sans-serif;

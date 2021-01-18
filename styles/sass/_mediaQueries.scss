@@ -1,0 +1,250 @@
+@media (max-width: 1080px) {
+    h2 {
+        font-size: 3rem;
+    }
+    .far, .fab, .fas, a{
+        font-size: 4rem;
+    }
+    .main {
+        h1, h3{
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+    .arrow{
+        margin: -24px 0 0 -13px;
+    }
+    .skillz {
+        img{
+            width: 40px;
+        }
+    }
+    .contact {
+        .bubble{
+            width: 400px;
+            right: 2%;
+            top: 10%;
+        }
+        .bubbleMsg {
+            font-size: 4rem;
+            right: 120px;
+            top: 130px;
+        }
+        .longing {
+            width: 300px;
+        }
+    }
+}
+@media (max-width: 960px){
+    .spanx {
+        max-width: 960;
+    }
+    .main{
+        position: relative;
+        height: 50%;
+        section {
+            background-color: $black;
+            width: 100%;
+            height: 50vh;
+            img {
+                height: 50vh;
+            }
+        }
+        .weirdFlexRow{
+            flex-direction: column;
+            align-items: center;
+        }
+        h1, h2, h3{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 2.5rem;
+        }
+    }
+    .projects {
+        height: 200vh;
+        section {
+            background-color: $black;
+            width: 100%;
+        }
+        .weirdFlexRow{
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        img {
+            width: auto;
+        }
+    }
+    .contact {
+        height: 100vh;
+        .corset, .contactForm{
+            height: 85vh;
+        }
+        .corset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            position: absolute;
+            bottom: 5%;
+            align-items: center;
+        }
+        button {
+            margin-top: 25px;
+        }
+        .bubble {
+            width: 325px;
+            left: 75px;
+            top: 0;
+        }
+        .bubbleMsg {
+            font-size: 2.7rem;
+            left: 75px;
+            top: 120px;
+        }
+        .longing {
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .contact{
+        form{
+        justify-content: center;
+        }
+        input, textarea {
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .main {
+        h1, h2, h3{
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+    .about{
+        h2, a{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+    }
+    .contact{
+        form{
+            input, textarea {
+                margin: 10px 0;
+            }
+            button {
+                margin-top: 5px;
+            }
+        }
+        .bubble {
+            transform: rotate(0deg);
+            width: 100%;
+            left: 10%;
+            top: -8%;
+        }
+        .bubble img {
+            visibility: hidden;
+        }
+        .bubbleMsg {
+            font-size: 3rem;
+            left: 0;
+        }
+        .longing {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .main{
+        h1, h2, h3{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+    }
+    .sidebar, .socialsPanel {
+        width: 130px;
+        h2, a {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+    }
+    .sidebar {
+        left: -130px;
+    }
+    .openLeft {
+        transform: translateX(130px);
+    }
+    .socialsPanel {
+        right: -130px;
+    }
+    .openRight {
+        transform: translateX(-130px);
+    }
+    .skillz {
+        flex-wrap: wrap;
+        align-items: center;
+        li {
+            margin: 0 2%;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .main{
+        h1, h2, h3{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+    }
+    .about{
+        h2, a{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+    }
+    .contact{
+        form {
+            font-size: 2rem;
+        }
+        button{
+            font-size: 2rem;
+        }
+        .longing {
+            width: 200px;
+        }
+    }
+    .projects {
+        h2, a {
+            font-size: 2.5rem;
+        }
+    }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' /> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Sniglet&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cd22de1ab3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <title>thisGRRLcodes</title>
@@ -27,8 +27,8 @@
             <ul class="navList">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <footer>
@@ -38,44 +38,47 @@
     <header class="main">
         <div class="spanx weirdFlexRow">
             <section class="intro weirdFlexColumn">
-                <h1>
-                    <span class="tag">&lt;h1&gt; </span>Hello!
-                    <span class="tag"> &lt;/h1&gt;</span>
-                    <br>
-                    <span class="tag">&lt;h2&gt; </span>I am <strong>Christine Shiels</strong>
-                    <span class="tag"> &lt;/h2&gt;</span>
-                </h1>
-                <h2>
-                    <span class="tag">&lt;h3&gt; </span>A<strong> creative </strong>web developer
-                    <span class="tag"> &lt;/h3&gt;</span>
-                </h2>
-                <h3>
-                    <span class="punctuation">.</span>design
-                    <span class="punctuation"> {</span>
-                </h3>
-                <h3>
-                    <span class="and">&</span><span class="punctuation">:</span>develop
-                    <span class="punctuation"> {</span>
-                </h3>
-                <p>
-                    background<span class="punctuation">: </span>
-                    <span class="value">natural-science</span><span class="punctuation">, </span>education<span class="punctuation">;</span>
-                    <br>align-self<span class="punctuation">: </span> <span class="value">frontend-hypertext-asSassin</span><span class="punctuation">;</span>
-                    <br>direction<span class="punctuation">: </span>
-                    <span class="value">success</span><span class="punctuation">;</span>
-                </p>
-                <h3>
-                    <span class="punctuation">}</span>
-                </h3>
-                <h3>
-                    <span class="punctuation">}</span>
-                </h3>
-            </section>
-            <section class="photo">
-                <img src="./assets/notMe.jpg" alt="Not a picture of me">
-                <div class="overlay">
+                <div class="introText">
+                    <h1>
+                        <span class="tag">&lt;h1&gt; </span>Hello!
+                        <span class="tag"> &lt;/h1&gt;</span>
+                        <br>
+                        <span class="tag">&lt;h2&gt; </span>I am <span class="neon">Christine Shiels</span>
+                        <span class="tag"> &lt;/h2&gt;</span>
+                    </h1>
+                    <h2>
+                        <span class="tag">&lt;h3&gt; </span>A<span class="neon"> cr<span class="flickerLetter">e</span>ative</span> web developer
+                        <span class="tag"> &lt;/h3&gt;</span>
+                    </h2>
+                    <h3>
+                        <span class="punctuation">.</span>design
+                        <span class="punctuation"> {</span>
+                    </h3>
+                    <h3>
+                        <span class="and">&</span><span class="punctuation">:</span>develop
+                        <span class="punctuation"> {</span>
+                    </h3>
+                    <p>
+                        background<span class="punctuation">: </span>
+                        <span class="value">natural-science<span class="punctuation">, </span>education</span><span class="punctuation">;</span>
+                        <br>align-self<span class="punctuation">: </span> <span class="value">frontend-hypertext-asSassin</span><span class="punctuation">;</span>
+                        <br>direction<span class="punctuation">: </span>
+                        <span class="value">success</span><span class="punctuation">;</span>
+                    </p>
+                    <h3>
+                        <span class="punctuation">}</span>
+                    </h3>
+                    <h3>
+                        <span class="punctuation">}</span>
+                    </h3>
                 </div>
             </section>
+            <section class="photo">
+                <img src="./assets/neonFrame.jpg" alt="Strange girl growling and holding plastic dinosaur">
+            </section>
+            <nav class="arrow">
+                <a href="#about"><i class="fas fa-angle-double-down flickerArrow"></i></a>
+            </nav>
         </div>
     </header>
     <section id="about" class="about weirdFlexColumn spanx">
@@ -84,7 +87,7 @@
                 <h2 class="topTitle"><span class="cashMoney">$</span><span class="smoothies">(</span><span class="punctuation">'</span>.aboutMe<span class="punctuation">'</span><span class="smoothies">)</span><span class="punctuation">.</span>before<span class="smoothies">(</span></h2>
                 <p><span class="punctuation">"</span><span class="tag">&lt;p&gt;</span>I earned a BSc (High Honours) and MSc (Great Distinction) in Geological Sciences from the University of Saskatchewan where I acquired an extensive background in science education and communication.<span class="tag">&lt;/p&gt;</span><span class="punctuation">"</span></p>
                 <h2><span class="smoothies">)</span><span class="punctuation">.</span>addClass<span class="smoothies">(</span><span class="punctuation">'</span><a href="https://junocollege.com/bootcamp/" target="_blank">Juno College Bootcamp</a><span class="punctuation">'</span><span class="smoothies">)</span><span class="punctuation">
-                <br>.</span>change<span class="smoothies">(</span>newSkills<span class="punctuation">,</span> <span class="function">function</span><span class="cashMoney">()</span><span class="punctuation">{</span></h2>
+                <br>.</span>change<span class="smoothies">(</span>careerPath<span class="punctuation">,</span> <span class="function">function</span><span class="cashMoney">()</span><span class="punctuation">{</span></h2>
                 <p><span class="function">console<span class="punctuation">.</span></span><span class="cashMoney"><em>log</em></span><span class="smoothies">(</span><span class="punctuation">'</span>My love of learning and technology led me to build on the tech I learned in University (MATLAB, VBA, COMSOL, autoCAD, ArcGIS, and industry-specific software), by learning web development.<span class="punctuation">'</span><span class="smoothies">)</span><span class="punctuation">;</span></p>
                 <h2><span class="punctuation">}</span><span class="tag">return</span></h2>
                 <ul class="skillz weirdFlexRow">
@@ -101,7 +104,55 @@
                     <li><img src="./assets/responsive.png" alt="Responsive Design Icon"></li>
                 </ul>
                 <h2><span class="smoothies">)</span><span class="punctuation">;</span></h2>
+            </div>
+        </div>
+        <nav class="arrow">
+            <a href="#projects"><i class="fas fa-angle-double-down flickerArrow"></i></a>
+        </nav>
+    </section>
+    <section id="projectViewer" class="projects">
+        <div class="spanx weirdFlexRow">
+            <section class="projectPortal weirdFlexColumn">
+                <img src="./assets/neonFrameCodingNarrow.jpg" alt="neon sign that says coding">
+            </section>
 
+            <section id="projects"class="projectMenu weirdFlexColumn">
+                <h2><span class="punctuation">let </span>myProject <span class="punctuation">= </span><span class="function"><strong>document</strong></span><span class="punctuation">.</span><span class="cashMoney"><em>getElementById</em></span><span class="smoothies">(</span><span class="punctuation">"</span><span class="punctuation">"</span><span class="smoothies">)</span><span class="punctuation">;</span></h2>
+                <ul class="projectList">
+                    <li><a class="project01" href="#projectViewer">#jQueryAdventure</a></li>
+                    <li><a class="project02" href="#projectViewer">#tApp</a></li>
+                    <li><a class="project03" href="#projectViewer">#hue-are-you</a></li>
+                    <li><a class="project04" href="#projectViewer">#findFood</a></li>
+                    <li><a class="project05" href="#projectViewer">#lingo</a></li>
+                </ul>
+            </section>
+        </div>
+        <nav class="arrow">
+            <a href="#contact"><i class="fas fa-angle-double-down flickerArrow"></i></a>
+    </section>
+    <section id="contact" class="contact weirdFlexColumn spanx">
+        <div class="contactForm weirdFlexColumn">
+            <div class="corset">
+                <form action="https://formspree.io/f/mjvpaqbg" method="POST" class="weirdFlexColumn">
+                    <label for="userName" class="srOnly">
+                        Please enter your name
+                    </label>
+                    <input type="text" name="userName" placeholder="name" required>
+                    <label for="userEmail" class="srOnly">
+                        Please enter your email
+                    </label>
+                    <input type="email" name="userEmail" placeholder="email" required>
+                    <label for="message" class="srOnly">
+                        Type your message here
+                    </label>
+                    <textarea name="message" placeholder="type your message here :)" minlength="15" maxlength="666" required></textarea>
+                    <button type="submit">click here to send!</button>
+                </form>
+                <img class="longing" src="./assets/Christine01Neon.png" alt="Strange girl looking longingly into her bright future">
+                <div class="bubble">
+                    <img src="./assets/neonBubble.png" alt="neon speech bubble" class="bubblePic">
+                    <h2 class="bubbleMsg">send <span class="flicker">me</span><br>a message</h2>
+                </div>
             </div>
         </div>
     </section>

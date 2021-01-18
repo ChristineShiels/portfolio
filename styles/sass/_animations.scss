@@ -1,0 +1,85 @@
+.flicker {
+    animation: flicker 300ms ease-in-out infinite;
+    -moz-animation: flicker 300ms ease-in-out infinite;
+    -webkit-animation: flicker 300ms ease-in-out infinite;
+    -o-animation: flicker 300ms ease-in-out infinite;
+}
+
+@keyframes flicker {
+    0%,
+    100% {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    @include neonifyText($pink);
+    }
+    20% {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    @include neonifyText($black);
+    color: $black;
+    }
+}
+
+.flickerLetter {
+    animation: flickerLetter .12s ease-in-out infinite;
+    -moz-animation: flickerLetter .12s ease-in-out infinite;
+    -webkit-animation: flickerLetter .12s ease-in-out infinite;
+    -o-animation: flickerLetter .12s ease-in-out infinite;
+    position: relative;
+    top: 3px;
+}
+
+@keyframes flickerLetter {
+    0%,
+    100% {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    @include neonifyText($yellow);
+    }
+    50% {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    @include neonifyText($black);
+    color: $yellow;
+    }
+}
+
+.flickerArrow {
+    animation: flickerArrow 300ms ease-in-out infinite;
+    -moz-animation: flickerArrow 300ms ease-in-out infinite;
+    -webkit-animation: flickerArrow 300ms ease-in-out infinite;
+    -o-animation: flickerArrow 300ms ease-in-out infinite;
+}
+
+@keyframes flickerArrow {
+0%,
+100% {
+-webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+@include neonifyText($green);
+}
+20% {
+-webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+@include neonifyText($black);
+color: $black;
+}
+}
